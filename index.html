@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Yıldız Haritası Çıkarıcı</title>
+</head>
+<body>
+  <h1>Yıldız Haritası Çıkarıcı</h1>
+  <form action="/generate" method="POST">
+    <label for="birthDate">Doğum Tarihi:</label>
+    <input type="date" id="birthDate" name="birthDate">
+    <label for="birthTime">Doğum Saati:</label>
+    <input type="time" id="birthTime" name="birthTime">
+    <input type="submit" value="Yıldız Haritamı Çıkar">
+  </form>
+  <div id="result"></div>
+</body>
+<style>
+    body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  h1 {
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 30px;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  label {
+    margin-right: 10px;
+  }
+  
+  input[type="date"],
+  input[type="time"] {
+    width: 200px;
+    padding: 10px;
+    margin-bottom: 10px;
+  }
+  
+  input[type="submit"] {
+    width: 200px;
+    padding: 10px;
+    margin-bottom: 30px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+  }
+  
+  #result {
+    max-width: 600px;
+    padding: 30px;
+    margin: 0 auto;
+    background-color: #f8f9fa;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    line-height: 1.8rem;
+    text-align: justify;
+  }
+</style>
+</html>
